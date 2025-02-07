@@ -1,0 +1,464 @@
+:root {
+  --mobile-breakpoint: 768px;
+  --tablet-breakpoint: 1024px;
+  --content-max-width: 1673px;
+  --desktop-margin: 50px;
+  --mobile-margin: 20px;
+}
+
+body {
+  background-color: #151518;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.ellipse {
+  position: fixed;
+  width: 150vw;
+  height: 874px;
+  top: -437px;
+  left: -25vw;
+  background-color: #d7f1e2;
+  border-radius: 960px/437px;
+  filter: blur(400px);
+  opacity: 0.8;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  padding: 20px 0;
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  margin-top: 50px;
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--light-slides-color-9);
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.trendTitle {
+  color: #8a8a8b;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.hamburger {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  z-index: 40;
+  cursor: pointer;
+}
+
+.hamburger svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 55px;
+  height: 37px;
+  margin-right: 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.detail .div {
+  width: calc(100% - (var(--desktop-margin) * 2));
+  max-width: var(--content-max-width);
+  margin: 0 var(--desktop-margin);
+  height: auto;
+  position: relative;
+}
+
+.detail .pattern {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 216px;
+  transition: opacity 0.3s ease-out;
+  min-height: calc(100vh - 200px);
+}
+
+.detail .title-block {
+  width: 100%;
+  max-width: 931px;
+}
+
+.detail .title {
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--light-slides-color-9);
+  font-size: 64px;
+  letter-spacing: -2.56px;
+  line-height: 64px;
+  text-transform: uppercase;
+}
+
+.detail .pattern-name {
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  color: #8a8a8b;
+  font-size: 14px;
+  letter-spacing: -0.56px;
+  line-height: 14px;
+}
+
+.detail .pattern-flex {
+  display: flex;
+  gap: 95px;
+  margin-top: 60px;
+  flex-wrap: wrap;
+}
+
+.detail .pattern-content {
+  width: 40%;
+  flex-shrink: 0;
+  min-width: 500px;
+}
+
+.detail .info-group {
+  display: flex;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.info-group a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.info-group a:hover {
+  color: #8a8a8b;
+  text-decoration: underline;
+}
+
+.detail .subTitle {
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  color: #8a8a8b;
+  font-size: var(--body2-BOLD-font-size);
+  text-align: right;
+  letter-spacing: var(--body2-BOLD-letter-spacing);
+  line-height: var(--body2-BOLD-line-height);
+  font-style: var(--body2-BOLD-font-style);
+  width: 176px;
+  margin-bottom: 20px;
+}
+
+.detail .info-group p {
+  font-family: "Artifakt Legend-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--light-slides-color-2);
+  font-size: var(--body2-font-size);
+  letter-spacing: var(--body2-letter-spacing);
+  line-height: var(--body2-line-height);
+  font-style: var(--body2-font-style);
+  max-width: 445px;
+  min-width: 445px;
+  margin: 0px;
+  flex: 1;
+}
+
+.detail .pattern-img {
+  width: 60%;
+  flex: 1;
+  min-width: 500px;
+}
+
+.detail .image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 930/678;
+  object-fit: cover;
+}
+
+.detail .caption {
+  font-family: "Artifakt Legend-Regular", Helvetica;
+  font-weight: 400;
+  color: #8a8a8b;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 20px;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #151518;
+  transform: translateY(-100%);
+  z-index: 30;
+  display: none;
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.menu-overlay.initialized {
+  display: block;
+  visibility: visible;
+  opacity: 0;
+}
+
+.menu-overlay.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.menu-header {
+  display: none;
+}
+
+.menu-content {
+  max-width: 1728px;
+  margin: 0 auto;
+  padding: 40px 68px;
+  color: var(--light-slides-color-2);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-size: 24px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.menu-link {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  color: var(--light-slides-color-2);
+  flex: 1;
+  text-align: center;
+}
+
+.menu-link:hover {
+  opacity: 0.7;
+}
+
+.menu-link.disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.menu-link.disabled:hover {
+  opacity: 0.3;
+}
+
+.menu-icon {
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 216px;
+  transition: opacity 0.3s ease-out;
+  min-height: calc(100vh - 200px);
+}
+
+/* Add centering only for trend intro slides */
+.slide:has(.trend-intro-title) {
+  display: flex;
+  align-items: center;
+}
+
+/* Remove any margin-top when the slide is flex centered */
+.slide:has(.trend-intro-title) .slide-flex {
+  margin-top: 0;
+}
+
+.slide:not(:has(.slide-title-flex)) {
+  justify-content: normal;
+}
+
+.slide-title-flex + .slide-flex {
+  margin-top: 0;
+}
+
+.slide-title {
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--light-slides-color-9);
+  font-size: 64px;
+  letter-spacing: -2.56px;
+  line-height: 64px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.slide-flex {
+  display: flex;
+  gap: 95px;
+}
+
+.slide-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.slide-column h2 {
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  color: var(--light-slides-color-9);
+  font-size: 64px;
+  letter-spacing: -2.56px;
+  line-height: 64px;
+  text-transform: uppercase;
+}
+
+.slide-column p {
+  font-family: "Artifakt Legend-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--light-slides-color-2);
+  font-size: var(--body2-font-size);
+  letter-spacing: var(--body2-letter-spacing);
+  line-height: var(--body2-line-height);
+  max-width: 445px;
+}
+
+.slide-column img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.slide-flex .slide-column .trend-intro-title {
+  font-family: "Artifakt Legend-Bold", Helvetica;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 32px;
+  margin: 0;
+}
+
+/* Adjust slide-column styles for trend intros */
+.slide-flex .slide-column:first-child {
+  display: flex;
+}
+
+.slide-title-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: left;
+  margin-bottom: 20px;
+}
+
+.slide-title-flex img {
+  width: 80px;
+  height: 80px;
+}
+
+.slide-title-flex h2 {
+  margin: 0;
+}
+
+.slide-title-flex span {
+  font-family: "Artifakt Legend-Regular", Helvetica;
+  font-weight: 400;
+  color: var(--light-slides-color-2);
+  font-size: 14px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .detail .pattern-flex {
+    gap: 40px;
+  }
+
+  .detail .pattern-content {
+    width: 45%;
+    min-width: 400px;
+  }
+
+  .detail .pattern-img {
+    width: 55%;
+    min-width: 400px;
+  }
+  
+  .detail .info-group p {
+    max-width: 350px;
+    min-width: 350px;
+  }
+}
+
+/* Mobile breakpoint - trigger before flex-wrap creates awkward layouts */
+@media (max-width: 900px) {  /* Increased from 768px */
+  .detail .pattern-flex {
+    flex-direction: column;
+    flex-wrap: nowrap; /* Disable wrapping in mobile */
+    gap: 40px;
+  }
+
+  .detail .pattern-content,
+  .detail .pattern-img {
+    width: 100%;
+    min-width: unset; /* Remove min-width constraints */
+  }
+
+  .detail .info-group p {
+    max-width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Ensure desktop margins */
+@media (min-width: 769px) {
+  .headerTitle {
+    margin-left: var(--desktop-margin);
+  }
+}
+
+.hamburger object {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}

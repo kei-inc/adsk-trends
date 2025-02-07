@@ -1,0 +1,133 @@
+{
+  "trendSettings": {
+    "introduction": {
+      "title": "Introduction",
+      "color": "#d7f1e2",
+      "description": "An overview of AI and its current capabilities in creative tools."
+    },
+    "workflow": {
+      "title": "Intelligent Workflows",
+      "color": "#63C1F8",
+      "description": "Patterns that show how AI can enhance and streamline creative workflows, making tools more intuitive and productive."
+    },
+    "generative": {
+      "title": "Generative Creativity",
+      "color": "#98EABB",
+      "description": "Exploring how AI can be a creative collaborator, generating and iterating on ideas alongside humans."
+    },
+    "working": {
+      "title": "New Ways of Working",
+      "color": "#C592FF",
+      "description": "New ways of working with AI to create better products and services."
+    },
+    "ux": {
+      "title": "AI UX",
+      "color": "#f1d7d7",
+      "description": "An audit of the most interesting and innovative AI UX patterns."
+    }
+  },
+  "introduction": [
+    {
+      "trendId": "introduction",
+      "title": "An Introduction to AI Patterns",
+      "leftColumn": {
+        "content": "AI can mean many things at this point, but for the purposes of this document, at a very high level, we are referring to Neural Networks that have access to huge libraries of examples to sample from that can statistically predict what is most likely to come next as it starts generating something. "
+      },
+      "rightColumn": {
+        "content": "The two most common types are Large Language Models (LLMs) that work with text, and image generation models like Stable Diffusion that create visual content."
+      }
+    },
+    {
+      "trendId": "introduction",
+      "title": "The Core Services",
+      "leftColumn": {
+        "content": "There are so many powerful tools emerging every day, so this isn't meant to be a comprehensive list, but rather an overview of the current state and a way to approach them. The art of modern AI Co-creation is learning how to leverage and orchestrate the many tools out there for what they are best at."
+      },
+      "rightColumn": {
+        "content": "ChatGPT<br>Claude<br>Perplexity<br>Midjourney<br>Dall-E<br>Sora<br>Google Veo 2<br>Runway<br>ElevenLabs<br>Suno<br>Cursor<br>Adobe Tools"
+      }
+    },
+    {
+      "trendId": "introduction",
+      "title": "ChatGPT",
+      "image": "./img/icon_chatgpt.png",
+      "company": "OpenAI",
+      "leftColumn": {
+        "content": "",
+        "screenshot": "<img src='./img/screen_chatgpt.jpg' alt='ChatGPT' style='width: 100%; height: auto;'>"
+      },
+      "rightColumn": {
+        "content": "In many ways ChatGPT is the original expression of what we now think of as LLMs Its chat based interface set the interface standard and <b>continues to push the boundaries of what is possible</b>. ChatGPT has more integrations with other apps, has <b>image generation built in</b> and operates as a pretty good jack of all trades like interface. Perhaps the most useful part of ChatGPT is that it has <b>access to the internet</b> without a cutoff date for its library."
+      }
+    },
+    {
+      "trendId": "introduction",
+      "title": "Claude",
+      "company": "Anthropic",
+      "image": "./img/icon_claude.png",
+      "leftColumn": {
+        "content": "",
+        "screenshot": "<img src='./img/screen_claude.jpg' alt='Claude' style='width: 100%; height: auto;'>"
+      },
+      "rightColumn": {
+        "content": "Claude seems to have a deeper-thinking more strategic model with a more thoughtful reasoning of its responses. <b>We love it as a real creative partner</b>. It currently has <b>best in class code generation</b>. Unfortunately its data cutoff date is currently April 2024. "
+
+      }
+    }
+    
+  ],
+  "patterns": [
+    {
+      "trendId": "workflow",
+      "title": "THE AGENTIC MENTOR",
+      "origin": {
+        "company": "SocialAI",
+        "product": "Social Media App"
+      },
+      "pattern": "SocialAI creates a private social network populated by AI agents trained in your interests. Rather than immediate responses, these agents engage with your posts over time, offering layered feedback, asking probing questions, and surfacing insights.",
+      "upshot": "The delayed, ongoing responses create a more natural learning rhythm than rapid-fire AI chat",
+      "image": "./img/agentic.jpg",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "Your agentic followers respond to your posts and post their own thoughts slowly but surely helping you understand potentially complex ideas over time."
+    },
+    {
+      "trendId": "workflow",
+      "title": "AMBIENT CREATIVE ASSISTANT",
+      "origin": {
+        "company": "Adobe Premiere Pro",
+        "product": "Scene Analysis"
+      },
+      "pattern": "While you work in Premiere Pro, the system automatically transcribes dialogue, tags scenes by composition type, and suggests potential edit points based on both speech and visual analysis. Creates a layer of intelligent assistance that works ahead of you.",
+      "upshot": "Makes passive footage into an actively helpful creative material that thinks alongside you.",
+      "image": "./img/ambient.jpg",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "As you add clips, the system begins transcribing in the background and identifying cut points, and edit suggestions based on ums and gaps."
+    },
+    {
+      "trendId": "workflow",
+      "title": "A New Pattern",
+      "origin": {
+        "company": "Adobe Premiere Pro",
+        "product": "Scene Analysis"
+      },
+      "pattern": "While you work in Premiere Pro, the system automatically transcribes dialogue, tags scenes by composition type, and suggests potential edit points based on both speech and visual analysis. Creates a layer of intelligent assistance that works ahead of you.",
+      "upshot": "Makes passive footage into an actively helpful creative material that thinks alongside you.",
+      "image": "./img/ambient.jpg",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "As you add clips, the system begins transcribing in the background and identifying cut points, and edit suggestions based on ums and gaps."
+    },
+    {
+      "trendId": "generative",
+      "title": "Yet another Pattern",
+      "origin": {
+        "company": "Adobe Premiere Pro",
+        "product": "Scene Analysis"
+      },
+      "pattern": "While you work in Premiere Pro, the system automatically transcribes dialogue, tags scenes by composition type, and suggests potential edit points based on both speech and visual analysis. Creates a layer of intelligent assistance that works ahead of you.",
+      "upshot": "Makes passive footage into an actively helpful creative material that thinks alongside you.",
+      "image": "./img/ambient.jpg",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "As you add clips, the system begins transcribing in the background and identifying cut points, and edit suggestions based on ums and gaps."
+    }
+  ]
+} 

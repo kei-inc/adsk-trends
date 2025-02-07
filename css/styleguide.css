@@ -1,0 +1,48 @@
+:root {
+    --body2-BOLD-font-family: "Artifakt Legend", Helvetica;
+    --body2-BOLD-font-weight: 700;
+    --body2-BOLD-font-size: 20px;
+    --body2-BOLD-letter-spacing: -0.8px;
+    --body2-BOLD-line-height: 139.9999976158142%;
+    --body2-BOLD-font-style: normal;
+    --body2-font-family: "Artifakt Legend", Helvetica;
+    --body2-font-weight: 400;
+    --body2-font-size: 20px;
+    --body2-letter-spacing: -0.8px;
+    --body2-line-height: 139.9999976158142%;
+    --body2-font-style: normal;
+    --h00-font-family: "Artifakt Legend", Helvetica;
+    --h00-font-weight: 700;
+    --h00-font-size: 20px;
+    --h00-letter-spacing: -0.6px;
+    --h00-line-height: 100%;
+    --h00-font-style: normal;
+    --light-slides-color-2: rgba(255, 255, 255, 1);
+    --light-slides-color-9: rgba(242, 250, 255, 1);
+  }
+
+  @font-face {
+    font-family: 'Artifakt Legend-Bold';
+    src: url('../fonts/Artifakt Web/Legend Web/WOFF2/Artifakt Legend Bold.woff2') format('woff2'),
+         url('../fonts/Artifakt Web/Legend Web/WOFF/Artifakt Legend Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Artifakt Legend-SemiBold';
+    src: url('../fonts/Artifakt Web/Legend Web/WOFF2/Artifakt Legend SemiBold.woff2') format('woff2'),
+         url('../fonts/Artifakt Web/Legend Web/WOFF/Artifakt Legend SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+  font-family: 'Artifakt Legend-Regular';
+  src: url('../fonts/Artifakt Web/Legend Web/WOFF2/Artifakt Legend Regular.woff2') format('woff2'),
+       url('../fonts/Artifakt Web/Legend Web/WOFF/Artifakt Legend Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

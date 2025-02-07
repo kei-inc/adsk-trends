@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    /* Base styles for all lines */
+    .line {
+      stroke: #fff;
+      stroke-width: 4;
+      stroke-linecap: round;
+      transition: transform 0.3s ease;
+      /* All transforms will rotate around the center of each line */
+      transform-origin: center;
+    }
+    
+    .menu {
+      cursor: pointer;
+    }
+    
+    .menu-background {
+      fill: transparent;  /* Transparent background */
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* Transforms applied when menu is active (X state) */
+    .menu.active .top {
+      /* translate(0, 25px) moves down 25px to meet middle line
+         rotate(45deg) creates the first diagonal of the X */
+      transform: translate(-16px, 12.5px) rotate(45deg);
+    }
+    
+    .menu.active .middle {
+      /* No vertical movement needed for middle line
+         rotate(-45deg) creates the second diagonal of the X */
+      transform: translate(0, -6.25px) rotate(-45deg);
+    }
+  </style>
+
+  <g class="menu" onclick="this.classList.toggle('active')">
+    <!-- Add transparent background rect for click area -->
+    <rect class="menu-background" x="0" y="0" width="100" height="100"/>
+    
+    <!-- Group for X-forming lines -->
+    <!-- translate(0, -12.5) moves both lines up by 12.5 units -->
+    <g transform="translate(0, 0)">
+      <!-- Top line: positioned at y=25 -->
+      <!-- x1,y1 (25,25) to x2,y2 (75,25) creates a 50-unit wide horizontal line -->
+      <line class="line top" x1="25" y1="25" x2="75" y2="25"/>
+      
+      <!-- Middle line: positioned at y=50 -->
+      <!-- x1,y1 (25,50) to x2,y2 (75,50) creates a 50-unit wide horizontal line -->
+      <line class="line middle" x1="25" y1="50" x2="75" y2="50"/>
+    </g>
+    
+    <!-- Bottom line: positioned at y=75 -->
+    <!-- This line stays static during the animation -->
+    <line class="line bottom" x1="25" y1="75" x2="75" y2="75"/>
+  </g>
+</svg>
