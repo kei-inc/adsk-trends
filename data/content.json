@@ -29,7 +29,17 @@
   "introduction": [
     {
       "trendId": "introduction",
-      "title": "An Introduction to AI Patterns",
+      "title": "AI Trends",
+      "leftColumn": {
+        "content": "ADSK Logo"
+      },
+      "rightColumn": {
+        "content": ""
+      }
+    },
+    {
+      "trendId": "introduction",
+      "title": "AI Co-Creation Strategies",
       "leftColumn": {
         "content": "AI can mean many things at this point, but for the purposes of this document, at a very high level, we are referring to Neural Networks that have access to huge libraries of examples to sample from that can statistically predict what is most likely to come next as it starts generating something. "
       },
@@ -112,13 +122,39 @@
       },
       "pattern": "While you work in Premiere Pro, the system automatically transcribes dialogue, tags scenes by composition type, and suggests potential edit points based on both speech and visual analysis. Creates a layer of intelligent assistance that works ahead of you.",
       "upshot": "Makes passive footage into an actively helpful creative material that thinks alongside you.",
-      "image": "./img/ambient.jpg",
+      "image": "./img/agentic.jpg",
       "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "caption": "As you add clips, the system begins transcribing in the background and identifying cut points, and edit suggestions based on ums and gaps."
     },
     {
       "trendId": "generative",
       "title": "Yet another Pattern",
+      "origin": {
+        "company": "Adobe Premiere Pro",
+        "product": "Scene Analysis"
+      },
+      "pattern": "While you work in Premiere Pro, the system automatically transcribes dialogue, tags scenes by composition type, and suggests potential edit points based on both speech and visual analysis. Creates a layer of intelligent assistance that works ahead of you.",
+      "upshot": "Makes passive footage into an actively helpful creative material that thinks alongside you.",
+      "image": "./img/ambient.jpg",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "As you add clips, the system begins transcribing in the background and identifying cut points, and edit suggestions based on ums and gaps."
+    },
+    {
+      "trendId": "working",
+      "title": "A Ways of working pattern",
+      "origin": {
+        "company": "Adobe Premiere Pro",
+        "product": "Scene Analysis"
+      },
+      "pattern": "While you work in Premiere Pro, the system automatically transcribes dialogue, tags scenes by composition type, and suggests potential edit points based on both speech and visual analysis. Creates a layer of intelligent assistance that works ahead of you.",
+      "upshot": "Makes passive footage into an actively helpful creative material that thinks alongside you.",
+      "image": "./img/agentic.jpg",
+      "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "caption": "As you add clips, the system begins transcribing in the background and identifying cut points, and edit suggestions based on ums and gaps."
+    },
+    {
+      "trendId": "ux",
+      "title": "A UX Pattern",
       "origin": {
         "company": "Adobe Premiere Pro",
         "product": "Scene Analysis"

@@ -219,58 +219,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             currentIndex = 0;
             scrollToPosition(getSnapPosition(scrollableElements[0]));
             updateTrendVisuals(0);
+            
+            // Add click handlers after we know elements are ready
+            document.querySelector('.logo').addEventListener('click', () => {
+                currentIndex = 0;  // Reset to first slide
+                goToPattern(0);    // This will handle both scrolling and updating visuals
+            });
+
+            document.querySelector('.siteTitle').addEventListener('click', () => {
+                currentIndex = 0;  // Reset to first slide
+                goToPattern(0);    // This will handle both scrolling and updating visuals
+            });
         }
     }, 100);
-
-    // Update trend visuals
-    const updateTrendVisuals = (index) => {
-        // Find which trend this element belongs to
-        const element = scrollableElements[index];
-        const trendId = element.getAttribute('data-trend');
-        const trend = trends.find(t => Array.from(t.patterns).some(p => p === element));
-        
-        if (trend) {
-            // Update trend title
-            trendTitle.textContent = trend.title;
-            
-            // Update ellipse color
-            if (ellipse.style.backgroundColor !== trend.color) {
-                ellipse.style.transition = 'background-color 0.2s ease-out';
-                ellipse.style.backgroundColor = trend.color;
-                
-                setTimeout(() => {
-                    ellipse.style.transition = '';
-                }, 200);
-            }
-        }
-    };
-
-    // Navigate to specific pattern
-    const goToPattern = (index) => {
-        if (index >= 0 && index < scrollableElements.length) {
-            currentIndex = index;
-            scrollToPosition(getSnapPosition(scrollableElements[index]));
-            updateTrendVisuals(index);
-        }
-    };
-
-    // Handle keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (isScrolling) return;
-        
-        switch (e.key) {
-            case 'ArrowDown':
-            case 'ArrowRight':
-                e.preventDefault();
-                goToPattern(currentIndex + 1);
-                break;
-            case 'ArrowUp':
-            case 'ArrowLeft':
-                e.preventDefault();
-                goToPattern(currentIndex - 1);
-                break;
-        }
-    });
 
     // Update menu functionality
     const hamburgerObject = document.querySelector('.hamburger object');
@@ -347,4 +308,54 @@ document.addEventListener('DOMContentLoaded', async () => {
         const menuOverlay = document.querySelector('.menu-overlay');
         menuOverlay.classList.add('initialized');
     }, 100);
+
+    // Update trend visuals
+    const updateTrendVisuals = (index) => {
+        // Find which trend this element belongs to
+        const element = scrollableElements[index];
+        const trendId = element.getAttribute('data-trend');
+        const trend = trends.find(t => Array.from(t.patterns).some(p => p === element));
+        
+        if (trend) {
+            // Update trend title
+            trendTitle.textContent = trend.title;
+            
+            // Update ellipse color
+            if (ellipse.style.backgroundColor !== trend.color) {
+                ellipse.style.transition = 'background-color 0.2s ease-out';
+                ellipse.style.backgroundColor = trend.color;
+                
+                setTimeout(() => {
+                    ellipse.style.transition = '';
+                }, 200);
+            }
+        }
+    };
+
+    // Navigate to specific pattern
+    const goToPattern = (index) => {
+        if (index >= 0 && index < scrollableElements.length) {
+            currentIndex = index;
+            scrollToPosition(getSnapPosition(scrollableElements[index]));
+            updateTrendVisuals(index);
+        }
+    };
+
+    // Handle keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (isScrolling) return;
+        
+        switch (e.key) {
+            case 'ArrowDown':
+            case 'ArrowRight':
+                e.preventDefault();
+                goToPattern(currentIndex + 1);
+                break;
+            case 'ArrowUp':
+            case 'ArrowLeft':
+                e.preventDefault();
+                goToPattern(currentIndex - 1);
+                break;
+        }
+    });
 });
